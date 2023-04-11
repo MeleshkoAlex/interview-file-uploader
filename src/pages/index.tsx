@@ -2,7 +2,7 @@ import { type NextPage } from "next";
 
 import NavBar from "@/components/NavBar/NavBar";
 import Playground from "@/components/Playground/Playground";
-import { useUserInfoContext } from "@/state/UserInfoContext";
+import { useUserInfoContext } from "@/context/UserInfoContext";
 import type { IGiphyItem } from "@/types";
 
 const Home: NextPage = () => {

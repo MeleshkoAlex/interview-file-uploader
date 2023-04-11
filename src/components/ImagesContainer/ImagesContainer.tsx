@@ -5,14 +5,15 @@ import styles from "./styles.module.scss";
 import Image from "./image";
 
 import type { IGiphyItem } from "@/types";
+import isEqual from "react-fast-compare";
 
-interface props {
+interface Props {
 	images?: IGiphyItem[];
 	selectedAvatar?: IGiphyItem | null;
 	onSelect: (data: IGiphyItem) => void;
 }
 
-const ImagesContainer: React.FC<props> = ({
+const ImagesContainer: React.FC<Props> = ({
 	images,
 	selectedAvatar,
 	onSelect
@@ -47,4 +48,4 @@ const ImagesContainer: React.FC<props> = ({
 	</div>
 );
 
-export default memo(ImagesContainer);
+export default memo(ImagesContainer, isEqual);

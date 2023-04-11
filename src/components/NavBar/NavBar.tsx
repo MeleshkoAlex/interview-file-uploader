@@ -1,8 +1,9 @@
-import { useRef, useState } from "react";
+import { memo, useRef, useState } from "react";
+import isEqual from "react-fast-compare";
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import defaultAvatar from "@/assets/images/blank-profile-picture-973460__340.webp";
-import { useUserInfoContext } from "@/state/UserInfoContext";
+import { useUserInfoContext } from "@/context/UserInfoContext";
 import HistoryAvatars from "../HistoryAvatars/HistoryAvatars";
 import useOnClickOutside from "@/hooks/useOnClickOutside";
 
@@ -54,4 +55,4 @@ const NavBar: React.FC = () => {
 	);
 };
 
-export default NavBar;
+export default memo(NavBar, isEqual);

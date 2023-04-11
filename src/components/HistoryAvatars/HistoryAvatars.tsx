@@ -1,16 +1,17 @@
-import { forwardRef } from "react";
+import { memo, forwardRef } from "react";
 import type { IGiphyItem } from "@/types";
 
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import moment from "moment";
+import isEqual from "react-fast-compare";
 
-interface props {
+interface Props {
 	data?: IGiphyItem[];
 	open: boolean;
 }
 
-const HistoryAvatarsComponent = forwardRef<HTMLDivElement, props>(
+const HistoryAvatarsComponent = forwardRef<HTMLDivElement, Props>(
 	function HistoryAvatars({ open, data }, ref) {
 		if (!open) return null;
 		return (
@@ -35,4 +36,4 @@ const HistoryAvatarsComponent = forwardRef<HTMLDivElement, props>(
 	}
 );
 
-export default HistoryAvatarsComponent;
+export default memo(HistoryAvatarsComponent, isEqual);

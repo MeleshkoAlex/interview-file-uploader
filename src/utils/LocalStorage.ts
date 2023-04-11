@@ -1,4 +1,4 @@
-import type { ICurrentUserInfo } from "@/state/UserInfoContext";
+import type { ICurrentUserInfo } from "@/context/UserInfoContext";
 
 class LocalStorage {
 	userKey = "user_info";

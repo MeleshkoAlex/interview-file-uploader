@@ -6,7 +6,7 @@ import { useOnLoadImages } from "@/hooks/useOnLoadImages";
 
 import styles from "./styles.module.scss";
 
-interface props {
+interface Props {
 	alt?: string;
 	onClick: (e?: SyntheticEvent<HTMLDivElement>) => void;
 	src: string;
@@ -14,7 +14,7 @@ interface props {
 	isActive?: boolean;
 }
 
-const Image: React.FC<props> = ({
+const Image: React.FC<Props> = ({
 	onClick,
 	isActive,
 	style,

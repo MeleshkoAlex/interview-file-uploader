@@ -4,7 +4,7 @@ import type { IChildren } from "@/types";
 
 import styles from "./styles.module.scss";
 
-interface props {
+interface Props {
 	onClick?: (e?: SyntheticEvent<HTMLButtonElement>) => void;
 	className?: string;
 	type?: "submit" | "button";
@@ -12,7 +12,7 @@ interface props {
 	disabled?: boolean;
 }
 
-const Button: React.FC<props> = ({
+const Button: React.FC<Props> = ({
 	type = "button",
 	onClick,
 	className,

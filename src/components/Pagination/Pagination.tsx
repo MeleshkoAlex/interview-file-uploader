@@ -3,12 +3,13 @@ import cn from "classnames";
 
 import styles from "./styles.module.scss";
 
-interface props extends Partial<PaginationProps> {
+interface Props extends Partial<PaginationProps> {
 	limit?: number;
 	total?: number;
 }
 
-const Pagination: React.FC<props> = ({ className, total, limit, ...props }) => {
+const Pagination: React.FC<Props> = ({ className, total, limit, ...props }) => {
+	// restrictions have been added because giphy cannot return more than 5000 elements
 	const _total = total && total > 5000 ? 5000 : total || 0;
 	return (
 		<div className={styles.wrapper}>

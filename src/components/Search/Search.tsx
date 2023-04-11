@@ -2,14 +2,14 @@ import type { ChangeEvent } from "react";
 import style from "./styles.module.scss";
 import Button from "../Button/Button";
 
-interface props {
+interface Props {
 	onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 	value: string;
 	onSubmit: () => void;
 	maxLength?: number;
 }
 
-const Search: React.FC<props> = ({
+const Search: React.FC<Props> = ({
 	value,
 	maxLength = 40,
 	onChange,

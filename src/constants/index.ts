@@ -1,2 +1,4 @@
-export const GIPHY_URL_API = "https://api.giphy.com/v1/gifs/search";
-export const GIPHY_API_KEY = "jmzWCXt0XacrE4nBdBeWLBg8C0DtlOS0";
+import { clientEnv } from "@/env/schema.mjs";
+
+export const GIPHY_URL_API = clientEnv.NEXT_PUBLIC_URL_API || "";
+export const GIPHY_API_KEY = clientEnv.NEXT_PUBLIC_API_KEY || "";

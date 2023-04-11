@@ -10,13 +10,13 @@ import { getImages } from "@/api/actions";
 import styles from "./styles.module.scss";
 import Footer from "./Components/Footer";
 import { SIZE, initialPagination } from "./Playground.settings";
-import { useUserInfoContext } from "@/state/UserInfoContext";
+import { useUserInfoContext } from "@/context/UserInfoContext";
 
-interface props {
+interface Props {
 	onSave: (selectedAvatar: IGiphyItem) => void;
 }
 
-const Playground: React.FC<props> = ({ onSave }) => {
+const Playground: React.FC<Props> = ({ onSave }) => {
 	const canDisplayedContent = useRef(false);
 	const {
 		userInfo: { currentUserInfo }
