@@ -1,0 +1,51 @@
+@import "@/styles/variables.scss";
+
+.container{
+  max-height: 400px;
+  overflow: auto;
+  position: absolute;
+  right: 0px;
+  top: 94px;
+  background: $color-dark;
+  border-radius: 4px 4px 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0.36) 0px -2px 24px 0px inset,
+    rgba(0, 0, 0, 0.5) 0px 4px 27px 0px;
+  padding: 12px 15px;
+  animation: fade 0.3s backwards;
+  z-index: 10;
+}
+
+.content{
+  background: $color-dark;
+  border: 1px solid $color-black;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  width: 100%;
+  color: #fff;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.item{
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.img{
+  position: relative !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+@keyframes fade {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}

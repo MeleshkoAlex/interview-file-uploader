@@ -1,0 +1,21 @@
+@import "@/styles/variables.scss";
+
+.footer {
+  background: $color-dark;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: rgba(0, 0, 0, 0.36) 0px -2px 24px 0px inset,
+    rgba(0, 0, 0, 0.5) 0px 4px 27px 0px;
+  padding: 12px 15px;
+  display: block;
+
+  &__inner {
+    background: $color-dark;
+    display: flex;
+    list-style-type: none;
+    border-radius: 4px 4px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0.36) 0px -2px 24px 0px inset,
+      rgba(0, 0, 0, 0.5) 0px 4px 27px 0px;
+    padding: 12px 15px;
+    justify-content: space-between;
+  }
+}

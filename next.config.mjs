@@ -6,12 +6,16 @@
 !process.env.SKIP_ENV_VALIDATION && (await import("./src/env/server.mjs"));
 
 /** @type {import("next").NextConfig} */
+
 const config = {
-  reactStrictMode: true,
-  swcMinify: true,
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
+	reactStrictMode: true,
+	swcMinify: true,
+	i18n: {
+		locales: ["en"],
+		defaultLocale: "en"
+	},
+	images: {
+		domains: new Array(20).fill(20).map((_, i) => `media${i}.giphy.com`)
+	}
 };
 export default config;
